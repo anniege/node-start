@@ -1,0 +1,82 @@
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		font-family: Arial, sans-serif;
+	}
+
+	.app-form {
+		display: block;
+		margin: 20px 10px;
+	}
+
+	.app-form__text {
+		width: 40%;
+		height: 25px;
+		padding: 20px 0 10px 25px;
+		border:  1px solid transparent;
+		border-bottom: 1px solid grey;
+		outline: none;
+	}
+
+	.app-form__text--depth {
+		display: inline-block;
+		width: 150px;
+		padding: 32px 20px;
+    	vertical-align: middle;
+	}
+
+	.app-form__btn {
+		width: 250px;
+		height: 25px;
+		border: 1px solid #eee;
+		background-color: #fff;
+		color: #555;
+		outline: none;
+		transition: all .3s;
+	}
+
+	.app-form__btn:hover {
+		background-color: #555;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	#page {
+		display: block;
+		height: 500px;
+		overflow: scroll;
+	}
+
+	#depth-label {
+		display: inline-block;
+		padding: 38px 5px;
+		color: #999;
+	}
+	</style>
+
+	<form action="/search" method="GET" class="app-form">
+		<input type="text" class="app-form__text" name="{{name}}" value="" placeholder="{{placeholderText}}">
+		<button type="submit" class="app-form__btn">{{btnTxt}}</button>
+
+		{{#if body}}
+		<div class="controls">
+			<label id="depth-label" for="depth">Select the depth from 0 to 6:</label>
+			<input type="range" id="depth" class="app-form__text app-form__text--depth" name="{{depthCount}}" min="0" max="6">
+		</div>
+		<div id="page">{{{body}}}</div>
+		{{/if}}
+	</form>
+
+	<script type="text/javascript">
+		var page = document.querySelector('#page');
+		if(page) {
+			page.addEventListener('click', function(event) {
+				var target = event.target;
+				if (target.tagName == 'A') {
+					event.preventDefault();
+				}
+				document.querySelector('.app-form__text').value = target.className;
+			});
+		}
+	</script>
