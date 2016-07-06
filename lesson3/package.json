@@ -1,0 +1,19 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "Command line utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "imgOpt": "./bin/imgOpt"
+  },
+  "author": "Anna Garmashevska",
+  "license": "ISC",
+  "dependencies": {
+    "coa": "^1.0.1",
+    "express": "^4.14.0",
+    "kraken": "^0.3.3"
+  }
+}
