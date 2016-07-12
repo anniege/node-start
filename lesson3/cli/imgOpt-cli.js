@@ -56,7 +56,7 @@ function isNumeric(n) {
 }
 
 coa.Cmd() 
-	.name("imgOptimize")
+	.name(process.argv[1])
 	.title('The command utility to optimize the images')  
 	.helpful() 
 	.opt() 
