@@ -1,13 +1,13 @@
 {
-  "name": "lesson3",
+  "name": "imageOptimizer",
   "version": "1.0.0",
   "description": "Command line utility",
-  "main": "index.js",
+  "main": "cli/imgOpt-cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine-node spec"
   },
   "bin": {
-    "imgOpt": "./bin/imgOpt"
+    "imgOpt": "./cli/imgOpt-cli.js"
   },
   "author": "Anna Garmashevska",
   "license": "ISC",
@@ -15,5 +15,11 @@
     "coa": "^1.0.1",
     "express": "^4.14.0",
     "kraken": "^0.3.3"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "nock": "^8.0.0",
+    "nodemon": "^1.9.2",
+    "rewire": "^2.5.2"
   }
 }
