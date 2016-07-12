@@ -56,7 +56,7 @@ function isNumeric(n) {
 }
 
 coa.Cmd() 
-	.name(process.argv[1])
+	.name("imgOptimize")
 	.title('The command utility to optimize the images')  
 	.helpful() 
 	.opt() 
@@ -119,7 +119,6 @@ coa.Cmd()
 		.act((options, args) => {
 			if (args) {
 				let pathImage =  imgDir + options.input;
-				console.log(pathImage);
 				let opts = {
 					file: fs.createReadStream(pathImage),
 					wait: true,
