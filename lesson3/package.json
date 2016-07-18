@@ -1,0 +1,24 @@
+{
+  "name": "imageOptimizer",
+  "version": "1.0.0",
+  "description": "Command line utility",
+  "main": "cli/imgOpt-cli.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "bin": {
+    "imgOptimize": "./cli/imgOpt-cli.js"
+  },
+  "author": "Anna Garmashevska",
+  "license": "ISC",
+  "dependencies": {
+    "coa": "^1.0.1",
+    "express": "^4.14.0",
+    "kraken": "^0.3.3"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "nodemon": "^1.9.2",
+    "rewire": "^2.5.2"
+  }
+}
